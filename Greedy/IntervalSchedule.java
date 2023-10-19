@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 public class IntervalSchedule {
     public static void main(String[] args) {
-        int[][] intervals = new int[][]{{1, 3}, {5, 6},{2, 4}};
+        int[][] intervals = new int[][]{{1, 3}, {6, 7},{4,5},{2, 4}};
         solve(intervals);
     }
 
@@ -31,7 +31,13 @@ public class IntervalSchedule {
                 result.add(interval);
             }
         }
-        System.out.println(intervals);
+        printResult(result);
+    }
+
+    public static void printResult(List<int[]> result){
+        for(int[] r : result){
+            System.out.println("[" + r[0] + ", " + r[1]+"]");
+        }
     }
     
 }
