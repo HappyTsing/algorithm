@@ -198,6 +198,7 @@ def backtrack(路径, 选择列表):
         return
     
     for 选择 in 选择列表:
+        排除不合法的选择
         做选择
         backtrack(路径, 选择列表)
         撤销选择
